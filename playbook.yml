@@ -4,4 +4,5 @@
   roles:
     - ubuntu
     - syncthing
-    - docker    
+    - docker
+    - vscode

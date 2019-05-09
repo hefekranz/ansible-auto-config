@@ -15,4 +15,4 @@
     name: syncthing
     update_cache: yes
 - name: add syncthing to autostart
-  shell: ln -s /usr/share/applications/syncthing-start.desktop ~/.config/autostart/syncthing.desktop
+  shell: mkdir -p ~/.config/autostart && ln -s /usr/share/applications/syncthing-start.desktop ~/.config/autostart/syncthing.desktop
