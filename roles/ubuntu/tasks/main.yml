@@ -8,9 +8,8 @@
     packages:
     - apt-transport-https
     - git
-    - google-chrome-stable
     - chromium-browser
-    - direnvs
+    - direnv
     - coreutils
     - curl
     - gimp
@@ -24,11 +23,10 @@
     - netcat
     - nodejs
     - npm
-    - numix-icon-theme-circle
     - openjdk-8-jre
     - openjdk-8-jdk
     - python
-    - rysnc
+    - rsync
     - rdesktop
     - terminator
     - unrar
@@ -39,3 +37,4 @@
     - code
     - keepassxc
     - clementine
+    - wget

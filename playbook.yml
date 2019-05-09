@@ -4,4 +4,4 @@
   roles:
     - ubuntu
     - syncthing
-    
+    - docker    
