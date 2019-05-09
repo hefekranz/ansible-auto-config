@@ -14,5 +14,13 @@
   apt:
     name: syncthing
     update_cache: yes
-- name: add syncthing to autostart
-  shell: mkdir -p ~/.config/autostart && ln -sf /usr/share/applications/syncthing-start.desktop ~/.config/autostart/syncthing.desktop
+- name: prepare autostart dir
+  file:
+    path: ~/.config/autostart
+    state: directory
+- name: symlink syncthing desktop entry
+  file:
+    src: /usr/share/applications/syncthing-start.desktop
+    dest: ~/.config/autostart/syncthing.desktop
+    state: link
+    force: yes
