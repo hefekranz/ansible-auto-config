@@ -8,3 +8,34 @@
     packages:
     - apt-transport-https
     - git
+    - google-chrome-stable
+    - chromium-browser
+    - direnvs
+    - coreutils
+    - curl
+    - gimp
+    - gpg
+    - jq
+    - lsof
+    - mongodb-clients
+    - mysql-client
+    - mysql-workbench
+    - nano
+    - netcat
+    - nodejs
+    - npm
+    - numix-icon-theme-circle
+    - openjdk-8-jre
+    - openjdk-8-jdk
+    - python
+    - rysnc
+    - rdesktop
+    - terminator
+    - unrar
+    - unzip
+    - vlc
+    - zip
+    - gnome-tweak-tool
+    - code
+    - keepassxc
+    - clementine
