@@ -1,7 +1,7 @@
 
   - name: Install Docker prerequisites
     become: yes
-    apt:     
+    apt:
         name: "{{packages}}"
         state: present
         update_cache: yes
@@ -14,7 +14,7 @@
 
   - name: Add Docker GPG key
     become: yes
-    apt_key: 
+    apt_key:
         url: https://download.docker.com/linux/ubuntu/gpg
         state: present
   - name: Add Docker APT repository
@@ -28,3 +28,14 @@
     apt:
         name: docker-ce
         update_cache: yes
+  - name: add docker group
+    become: yes
+    group:
+      name: docker
+      state: present
+  - name: add user to docker group
+    become: yes
+    user:
+      name: "{{ ansible_user_id }}"
+      append: yes
+      groups: docker

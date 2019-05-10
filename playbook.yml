@@ -6,3 +6,6 @@
     - syncthing
     - docker
     - vscode
+    - docker-compose
+  vars:
+    docker_compose_version: 1.24.0
