@@ -1,0 +1,25 @@
+- name: prepare dest dir
+  file:
+    path: "{{ postman_install_dir }}"
+    state: directory
+- name: install postman
+  unarchive:
+    remote_src: yes
+    src: https://dl.pstmn.io/download/latest/linux64
+    dest: "{{ postman_install_dir }}"
+- name: symlink executable
+  become: yes
+  file:
+    src: "{{ postman_install_dir }}/Postman/Postman"
+    dest: /usr/local/bin/postman
+    state: link
+    force: yes
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: "755"
+- name: add desktop entry
+  copy:
+    src: postman.desktop
+    dest: ~/.local/share/applications/
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
