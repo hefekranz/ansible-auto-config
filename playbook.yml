@@ -8,5 +8,7 @@
     - vscode
     - docker-compose
     - postman
+    - gcloud
+    - kubectl
   vars:
     docker_compose_version: 1.24.0
